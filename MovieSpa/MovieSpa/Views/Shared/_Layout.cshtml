@@ -8,12 +8,27 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <ul class="menu">
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-    </ul>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Site Title</li>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><input type="search" placeholder="Search"></li>
+                <li><button type="button" class="button">Search</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-app="" class="row">
+            <input type="text" ng-model="name" />
+            {{name}}
+         </div>
+     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -22,8 +37,9 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/foundation")
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/foundation")
+            @Scripts.Render("~/bundles/angular")
     @RenderSection("scripts", required: false)
 </body>
 </html>

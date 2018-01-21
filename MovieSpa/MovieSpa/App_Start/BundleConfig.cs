@@ -33,6 +33,9 @@ namespace MovieSpa
             bundles.Add(new ScriptBundle("~/bundles/foundation").Include(
                         "~/Scripts/foundation/foundation.js",
                         "~/Scripts/foundation/foundation.*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/angular.js"));
         }
     }
 }
