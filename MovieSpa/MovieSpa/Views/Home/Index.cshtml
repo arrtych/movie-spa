@@ -1,27 +1,27 @@
 ﻿@{
     ViewBag.Title = "Home Page.Index";
 }
-@model IEnumerable<MovieSpa.Models.Movie>
-@*<div class="grid-x">
+@*@model IEnumerable<MovieSpa.Models.Movie>*@
 
-    </div>*@
-<h2>List of movies</h2>
-@foreach (var item in Model)
-{
-<div class="grid-x">
-    
-    <div ng-repeat="item in Model | filter:filterText" class="small-6 large-4 columns">
-        @*<h4>ID: @item.Id</h4>*@
-        <h4>Title: @item.Title</h4>
-        <p>Genre: @item.Genre</p>
-        <p>Year: @item.Year</p>
-        <p>Rating: @item.Rating</p>
+<div ng-controller="MovieController">
+    {{MoviesHeader}}
+
+    <div class="grid-padding-x content-block">
+        <h2>List of movies</h2>
+       List: {{MovieList}}
+
+        @*@foreach (var item in Model)
+        {*@
+        <div ng-repeat="m in MovieList" class="grid-x movie-content">
+            @*ng-repeat="item in Model | filter:filterText"*@
+            <div class="small-6 large-4 columns">
+                @*<h4>ID: @item.Id</h4>*@
+                <h4>Title: {{m.Title}}</h4>
+                <p>Genre: {{m.Genre}}</p>
+                <p>Year: {{m.Year}}</p>
+                <p>Rating: {{m.Rating}}</p>
+            </div>
+        </div>
+        @*}*@
     </div>
-</div>
-}
-
-<div class="grid-x">
-    <div class="medium-3 columns">3 columns</div>
-    <div class="medium-9 columns">9 columns</div>
-    <button type="button" class="success button">Save</button>
-</div>
+</div> @*controller*@

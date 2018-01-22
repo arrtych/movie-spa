@@ -162,6 +162,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Angular\Controller.js" />
+    <Content Include="Content\Angular\Module.js" />
+    <Content Include="Content\Angular\Service.js" />
     <Content Include="Content\foundation\css\app.css" />
     <Content Include="Content\foundation\css\foundation.css" />
     <Content Include="Content\foundation\css\foundation.min.css" />

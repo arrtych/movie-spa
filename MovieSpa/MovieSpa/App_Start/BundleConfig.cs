@@ -28,14 +28,16 @@ namespace MovieSpa
             //          "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/foundation/css").Include(
-            "~/Content/foundation/css/foundation.min.css"));
+            "~/Content/foundation/css/foundation.min.css",
+            "~/Content/foundation/css/app.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/foundation").Include(
                         "~/Scripts/foundation/foundation.js",
                         "~/Scripts/foundation/foundation.*"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                      "~/Scripts/angular.js"));
+                      "~/Scripts/angular.js",
+                      "~/Scripts/angular-route.js"));
         }
     }
 }
