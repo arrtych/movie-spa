@@ -1,26 +1,29 @@
 ﻿@model IEnumerable<MovieSpa.Models.Movie>
+
+@{
+    ViewBag.Title = "List";
+}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List movie</title>
 </head>
 <body>
-    @{
-        ViewBag.Title = "List";
-    }
-
     <h2>List</h2>
     @foreach (var item in Model)
     {
-        <h4>ID: @item.Id</h4>
-        <h4>Title: @item.Title</h4>
-        <h4>Genre: @item.Genre</h4>
-        <h4>Year: @item.Year</h4>
-        <h4>Rating: @item.Rating</h4>
-        
-        <hr/>
+        <div class="grid-x">
+            <div class="small-6 large-4 columns">
+                @*<h4>ID: @item.Id</h4>*@
+                <h4>Title: @item.Title</h4>
+                <p>Genre: @item.Genre</p>
+                <p>Year: @item.Year</p>
+                <p>Rating: @item.Rating</p>
+            </div>
+        </div>
     }
+
 </body>
 </html>
-
