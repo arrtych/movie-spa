@@ -11,7 +11,5 @@ namespace MovieSpa.Repository
         List <Movie> GetMovies();
 
         Movie GetMovieByID(int movieId);
-
-        void Save();
     }
 }

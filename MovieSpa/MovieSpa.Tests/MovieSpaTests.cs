@@ -13,10 +13,10 @@ namespace MovieSpa.Tests
         {
             //arrange
             MovieRepository movieRepository = new MovieRepository();
-            Movie searchedMovie = movieRepository.GetMovieByID(2);
+            Movie searchedMovie = movieRepository.GetMovieByID(1);
 
             //actual
-            int expectedID = 2;
+            int expectedID = 1;
            
 
             //assert

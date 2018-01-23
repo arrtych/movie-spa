@@ -4,45 +4,38 @@
 @*@model IEnumerable<MovieSpa.Models.Movie>*@
 
 <div ng-controller="MovieController">
-    {{MoviesHeader}}
-
     @*Search*@
     <div class="grid-x grid-padding-x search-block">
-        @*<div ng-app="" class="small-2 large-4 columns">
-            <input type="text" ng-model="name" />
-            {{name}}
-        </div>*@
-        <div class="small-6 large-4 columns">
-            <ul class="menu">
-                <li><input type="text" ng-model="search[searchBy]" placeholder="Search"></li>
-                <li>
-                    <select ng-model="searchBy">
-                        <option value="$"></option>
-                        @*<option value="ID">ID</option>*@
-                        <option value="Title">Title</option>
-                        <option value="Genre">Genre</option>
-                        <option value="Year">Year</option>
-                        <option value="Rating">Rating</option>
-                        <option value="Description">Description</option>
-                    </select>
-                </li>
-            </ul>
+        <div class="small-3 large-3 columns">
+        </div>
+        <div class="small-3 large-3 columns">
+            <input type="text" ng-model="search[searchBy]" placeholder="Search">
+        </div>
+        <div class="small-3 large-3 columns">
+            <select ng-model="searchBy">
+                <option value="$"></option>
+                @*<option value="ID">ID</option>*@
+                <option value="Title">Title</option>
+                <option value="Genre">Genre</option>
+                <option value="Year">Year</option>
+                <option value="Rating">Rating</option>
+                <option value="Description">Description</option>
+            </select>
+        </div>
+        <div class="small-3 large-3 columns">
         </div>
     </div>
-
         @*Content*@
         <div class="grid-padding-x content-block">
-            <h2>List of movies</h2>
-            List: {{MovieList}}
-
+            <h4 class="list-header">List of movies</h4>
             <div ng-repeat="m in MovieList | filter:search" class="grid-x movie-content">
                 <div class="small-6 large-4 columns">
                     @*<h4>ID: @item.Id</h4>*@
-                    <h4>Title: {{m.Title}}</h4>
-                    <p>Genre: {{m.Genre}}</p>
-                    <p>Year: {{m.Year}}</p>
-                    <p>Rating: {{m.Rating}}</p>
-                    <p>Description: {{m.Description}}</p>
+                    <p><b>Title:</b> {{m.Title}}</p>
+                    <p><b>Genre:</b> {{m.Genre}}</p>
+                    <p><b>Year:</b> {{m.Year}}</p>
+                    <p><b>Rating:</b> {{m.Rating}}</p>
+                    <p><b>Description:</b> {{m.Description}}</p>
                 </div>
             </div>
         </div>

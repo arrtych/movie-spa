@@ -1,5 +1,8 @@
 .movie-content {
     border: 1px solid black;
-    padding: 1em;
-    margin: 1em;
+    padding: 0.7em;
+    margin: 0.7em;
+}
+.list-header {
+    margin-left: 0.45em;
 }

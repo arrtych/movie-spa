@@ -16,8 +16,6 @@ namespace MovieSpa.Repository
             this.movies = new Movies();
         }
 
-
-
         public List<Movie> GetMovies()
         {
             return movies.createList();
@@ -32,11 +30,5 @@ namespace MovieSpa.Repository
             return value;
         }
 
-
-
-        public void Save()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
