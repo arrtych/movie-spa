@@ -18,7 +18,7 @@ namespace MovieSpa.Models
             movieList.Add(new Movie()
             {
                 Id = 1,
-                Title = "Inception ",
+                Title = "Inception",
                 Genre = "Action, Adventure, Sci-Fi",
                 Year = 2010,
                 Rating = 8.8,
@@ -29,8 +29,8 @@ namespace MovieSpa.Models
             movieList.Add(new Movie()
             {
                 Id = 2,
-                Title = "The Lord of the Rings: The Fellowship of the Ring ",
-                Genre = "Adventure, Drama, Fantasy ",
+                Title = "The Lord of the Rings: The Fellowship of the Ring",
+                Genre = "Adventure, Drama, Fantasy",
                 Year = 2001,
                 Rating = 8.8,
                 Description = "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."

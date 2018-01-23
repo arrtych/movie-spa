@@ -100,5 +100,19 @@ namespace MovieSpa.Tests.Controllers
             Assert.AreEqual(expectedListCount, list.Count);
         }
 
+        [TestMethod]
+        public void TestMovieDetailsByIdInService()
+        {
+            //arrange
+            MovieService service = new MovieService(new MovieRepository());
+            Movie searchedMovie = service.GetMovie(1);
+
+            //actual
+            string expectedMovieDescription = "A thief, who steals corporate secrets through the use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.";
+
+            //assert
+            Assert.AreEqual(expectedMovieDescription, searchedMovie.Description);
+        }
+
     }
 }
