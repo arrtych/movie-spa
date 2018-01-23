@@ -7,7 +7,9 @@ namespace MovieSpa.Models
 {
     public class Movie
     {
+
         public int Id { get; set; }
+
         public string Title { get; set; }
 
         public string Genre { get; set; }
@@ -17,6 +19,8 @@ namespace MovieSpa.Models
         public double Rating { get; set; }
 
         public string Description { get; set; }
+
+        public Category categoryID;
 
     }
 }
