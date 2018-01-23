@@ -24,15 +24,13 @@ namespace MovieSpa.Controllers
         //return json data
         public JsonResult GetData()
         {
-            List<Movie> data = _service.ListOfMovies();
+            List<Movie> data = this._service.ListOfMovies();
             var json = JsonConvert.SerializeObject(data);
             return new JsonResult
             {
                 Data = json,
                 JsonRequestBehavior = JsonRequestBehavior.AllowGet
             };
-            
-
         }
 
 

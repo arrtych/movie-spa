@@ -25,18 +25,18 @@
         <div class="small-3 large-3 columns">
         </div>
     </div>
-        @*Content*@
-        <div class="grid-padding-x content-block">
-            <h4 class="list-header">List of movies</h4>
-            <div ng-repeat="m in MovieList | filter:search" class="grid-x movie-content">
-                <div class="small-6 large-4 columns">
-                    @*<h4>ID: @item.Id</h4>*@
-                    <p><b>Title:</b> {{m.Title}}</p>
-                    <p><b>Genre:</b> {{m.Genre}}</p>
-                    <p><b>Year:</b> {{m.Year}}</p>
-                    <p><b>Rating:</b> {{m.Rating}}</p>
-                    <p><b>Description:</b> {{m.Description}}</p>
-                </div>
+    @*Content*@
+    <div class="grid-padding-x content-block">
+        <h4 class="list-header">List of movies</h4>
+        <div ng-repeat="m in MovieList | filter:search" class="grid-x movie-content">
+            <div class="small-4 medium-6 large-12 columns">
+                @*<h4>ID: @item.Id</h4>*@
+                <p><b>Title:</b> {{m.Title}}</p>
+                <p><b>Genre:</b> {{m.Genre}}</p>
+                <p><b>Year:</b> {{m.Year}}</p>
+                <p><b>Rating:</b> {{m.Rating}}</p>
+                <p><b>Description:</b> {{m.Description}}</p>
             </div>
         </div>
-    </div> @*controller*@
+    </div>
+</div> @*controller*@

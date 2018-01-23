@@ -8,15 +8,6 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body ng-app="app">
-    @*<div class="top-bar">
-            <div class="top-bar-left">
-                <ul class="dropdown menu" data-dropdown-menu>
-                    <li class="menu-text">Movie SPA</li>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                </ul>
-            </div>
-        </div>*@
     <div class="grid-container">
         <div class="grid-x grid-padding-x primary callout text-center header-block">
             <div class="large-12 cell">
@@ -26,11 +17,9 @@
 
         @RenderBody()
 
-
-
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Date - My ASP.NET Application</p>
+            <p class="text-center">@DateTime.Now.ToString("dd/MM/yyyy") - Made By Artur Lipin &copy;</p>
         </footer>
     </div>
 

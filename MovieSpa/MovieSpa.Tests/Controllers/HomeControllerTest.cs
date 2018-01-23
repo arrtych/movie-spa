@@ -6,6 +6,9 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MovieSpa;
 using MovieSpa.Controllers;
+using MovieSpa.Models;
+using MovieSpa.Repository;
+using MovieSpa.Service;
 
 namespace MovieSpa.Tests.Controllers
 {
@@ -50,5 +53,52 @@ namespace MovieSpa.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+
+
+        [TestMethod]
+        public void TestGetMovieByIdInRepository()
+        {
+            //arrange
+            MovieRepository movieRepository = new MovieRepository();
+
+
+            //actual
+            Movie searchedMovie = movieRepository.GetMovieByID(1);
+            int expectedID = 1;
+
+
+            //assert
+            Assert.AreEqual(expectedID, searchedMovie.Id);
+        }
+
+        [TestMethod]
+        public void TestGetMovieByIdInService()
+        {
+            //arrange
+            MovieService service = new MovieService(new MovieRepository());
+
+
+            //actual
+            Movie searchedMovie = service.GetMovie(1);
+            int expectedID = 1;
+
+            //assert
+            Assert.AreEqual(expectedID, searchedMovie.Id);
+        }
+
+        [TestMethod]
+        public void TestListOfMoviesInService()
+        {
+            //arrange
+            MovieService service = new MovieService(new MovieRepository());
+            List<Movie> list = service.ListOfMovies();
+
+            //actual
+            int expectedListCount = 5;
+
+            //assert
+            Assert.AreEqual(expectedListCount, list.Count);
+        }
+
     }
 }

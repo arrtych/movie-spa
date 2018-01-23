@@ -5,8 +5,8 @@
         return $http.get("/Home/GetData");
     }
 
-    this.getByID = function () {
-        return $http.get("Home/GetDataById");
-    }
+    //this.getByID = function () {
+    //    return $http.get("Home/GetDataById");
+    //}
 
 });
