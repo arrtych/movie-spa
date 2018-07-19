@@ -7,6 +7,7 @@ Stack of technologies : ASP.NET MVC, AngularJS, Foundation 6 CSS Framework
 Subject: Movie database site
 ---
 Views:
+
 	1. List of movies:
 		- Display title, genre, year, rating, description
 		- Search movies by title,genre, year, rating, description. Search as autocomplete
