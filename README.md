@@ -8,11 +8,10 @@ Subject: Movie database site
 ---
 
 Data and business logic:
-	1. Class Movie [id (int), title, description, rating (int), category id], Movies list and Category (id, name).
+	1. Class Movie [id (int), title, description, rating (int), category id], Movies list and Category (id, name)
 	2. Movies Repository class
 		- method to return fixed (hard coded) list of movies
  		- method to return movie by id (from the hard coded list)
-
  	3. Movie service class:
 		- list of movies (return list of movies from Repository class method)
  		- details of selected movie (return from movie repository by id)
