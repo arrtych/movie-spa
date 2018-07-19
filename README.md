@@ -6,7 +6,13 @@ Stack of technologies : ASP.NET MVC, AngularJS, Foundation 6 CSS Framework
 
 Subject: Movie database site
 ---
+Views:
+	1. List of movies:
+		- Display title, genre, year, rating, description
+		- Search movies by title,genre, year, rating, description. Search as autocomplete
+		- Multi select control to filter movies by certain category
 
+---
 Data and business logic:
 
 	1. Class Movie [id (int), title, description, rating (int), category id], Movies list and Category (id, name)
@@ -18,7 +24,7 @@ Data and business logic:
  	3. Movie service class:
 		- list of movies (return list of movies from Repository class method)
  		- details of selected movie (return from movie repository by id)
- 		
+
  	4. MVC Controller for returning list of movies and movie details (using movie service class) in json format:
  		- API method to return list of movies
  		- API method to return movie details
